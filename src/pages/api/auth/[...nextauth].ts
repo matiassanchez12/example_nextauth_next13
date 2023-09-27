@@ -1,11 +1,11 @@
 import NextAuth from "next-auth";
 import { AuthOptions } from "next-auth";
 
-import GoogleProvider from "next-auth/providers/google";
+import TwitchProvider from "next-auth/providers/twitch";
 
 export const authOptions = {
   providers: [
-    GoogleProvider({
+    TwitchProvider({
       clientId: String(process.env.GOOGLE_CLIENT_ID)!,
       clientSecret: String(process.env.GOOGLE_CLIENT_SECRET)!
     })
